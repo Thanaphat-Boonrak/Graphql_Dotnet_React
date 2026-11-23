@@ -1,0 +1,11 @@
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/bin/Debug/net10.0/Core.deps.json
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/bin/Debug/net10.0/Core.dll
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/bin/Debug/net10.0/Core.pdb
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/Core.AssemblyInfoInputs.cache
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/Core.AssemblyInfo.cs
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/Core.csproj.CoreCompileInputs.cache
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/Core.dll
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/refint/Core.dll
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/Core.pdb
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/ref/Core.dll
