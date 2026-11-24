@@ -1,4 +1,5 @@
 using Core.Entities;
+using Core.Enums;
 using Core.Interfaces;
 using Core.Models;
 using Infrastructure.Data;
@@ -105,5 +106,25 @@ public class CustomerService(IDbContextFactory<AppDbContext> dbContextFactory) :
         }
 
         return await context.SaveChangesAsync() > 0;
+    }
+
+    public async Task<StatsModel> GetCustomerAndOrderStatsAsync()
+    {
+        await using var context = await dbContextFactory.CreateDbContextAsync();
+        var totalCustomer = await context.Customers.Where(c => !c.IsDelete).CountAsync();
+
+        var orders = await context.Orders.Where(o => !o.IsDeleted).ToListAsync();
+
+        return new StatsModel
+        {
+            TotalCustomers = totalCustomer,
+            TotalOrders = orders.Count,
+            PendingOrders = orders.Count(o => o.Status == OrderStatus.Pending),
+            DraftOrders = orders.Count(o => o.Status == OrderStatus.Draft),
+            CompletedOrders = orders.Count(o => o.Status == OrderStatus.Completed),
+            ShippedOrders = orders.Count(o => o.Status == OrderStatus.Shipped),
+        };
+
+
     }
 }

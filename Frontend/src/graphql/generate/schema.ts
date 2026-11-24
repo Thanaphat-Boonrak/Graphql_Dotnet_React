@@ -251,6 +251,7 @@ export type Query = {
   __typename?: 'Query';
   customers?: Maybe<Array<Maybe<Customer>>>;
   orders?: Maybe<Array<Maybe<Order>>>;
+  stats?: Maybe<StatsModel>;
 };
 
 
@@ -265,9 +266,45 @@ export type QueryOrdersArgs = {
   where?: InputMaybe<OrderFilterInput>;
 };
 
+
+export type QueryStatsArgs = {
+  order?: InputMaybe<Array<StatsModelSortInput>>;
+  where?: InputMaybe<StatsModelFilterInput>;
+};
+
 export type SortEnumType =
   | 'ASC'
   | 'DESC';
+
+export type StatsModel = {
+  __typename?: 'StatsModel';
+  completedOrders: Scalars['Int']['output'];
+  draftOrders: Scalars['Int']['output'];
+  pendingOrders: Scalars['Int']['output'];
+  shippedOrders: Scalars['Int']['output'];
+  totalCustomers: Scalars['Int']['output'];
+  totalOrders: Scalars['Int']['output'];
+};
+
+export type StatsModelFilterInput = {
+  and?: InputMaybe<Array<StatsModelFilterInput>>;
+  completedOrders?: InputMaybe<IntOperationFilterInput>;
+  draftOrders?: InputMaybe<IntOperationFilterInput>;
+  or?: InputMaybe<Array<StatsModelFilterInput>>;
+  pendingOrders?: InputMaybe<IntOperationFilterInput>;
+  shippedOrders?: InputMaybe<IntOperationFilterInput>;
+  totalCustomers?: InputMaybe<IntOperationFilterInput>;
+  totalOrders?: InputMaybe<IntOperationFilterInput>;
+};
+
+export type StatsModelSortInput = {
+  completedOrders?: InputMaybe<SortEnumType>;
+  draftOrders?: InputMaybe<SortEnumType>;
+  pendingOrders?: InputMaybe<SortEnumType>;
+  shippedOrders?: InputMaybe<SortEnumType>;
+  totalCustomers?: InputMaybe<SortEnumType>;
+  totalOrders?: InputMaybe<SortEnumType>;
+};
 
 export type StringOperationFilterInput = {
   and?: InputMaybe<Array<StringOperationFilterInput>>;

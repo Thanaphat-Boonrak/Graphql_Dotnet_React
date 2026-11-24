@@ -9,3 +9,4 @@
 /Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/refint/Core.dll
 /Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/Core.pdb
 /Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/ref/Core.dll
+/Users/thanaphatboonrak/Downloads/order-management-app/Backend/Core/obj/Debug/net10.0/Core.sourcelink.json
